@@ -1,0 +1,54 @@
+<html>
+<head>
+	<title>Book Info</title>
+
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+
+	<style type="text/css" media="screen">
+		form { width:80%; margin: auto; }
+		label { display: block; width: 100%; }
+		ul { list-style: none; }
+		ul li { padding: 10px; marign-top: 8px; }
+		label span { display: inline-block; width: 100px; text-align: right; margin-right: 10px; }
+		input { width: 400px; padding: 3px;}
+		input.button { width: 100px; padding:10px; }
+	</style>
+</head>
+<body>
+
+	<div class="container">
+
+		<form method="POST" action="processor.php">
+
+			<ul>
+				<li>
+					<label><span>Name of Book:</span> <input type="text" name="title" placeholder="Book Title"></label>
+				</li>
+				<li>
+					<label><span>Category:</span> <input type="text" name="category" placeholder="Category"></label>
+				</li>
+				<li>
+					<label><span>Authors:</span> <input type="text" name="author" placeholder="Author 1, Author 2"></label>
+				</li>
+				<li>
+					<label><span>ISBN Number:</span> <input type="text" name="isbn" placeholder="ISBN Number"></label>
+				</li>
+				<li>
+					<label><span>Price (Rs.):</span> <input type="text" name="price" placeholder="Price"></label>
+				</li>
+				<li>
+					<label><span>Publisher:</span> <input type="text" name="publisher" placeholder="Published by"></label>
+				</li>
+				<li>
+					<label><span>Published On:</span> <input type="text" name="published_on" placeholder="Published on"></label>
+				</li>
+				<li>
+					<input type="hidden" name="action" value="add" />
+					<input type="submit" value="SAVE" class="button" />
+				</li>
+		</form>
+	</div>
+
+</body>
+</html>
