@@ -1,13 +1,29 @@
 <?php
 	
+	$title = 'Books';
+	
 	require_once( '../res/config.php' );
 	require_once( '../res/functions.php' );
 
 	include_once( '../res/inc/header.php' );
 
+	session_start();
+
+	if( empty( $_SESSION['userid'] ) ) {
+
+		header( 'Location: logout.php' );
+	}
+
+	//print_r( $_SESSION );
+
 ?>		
 	<h3>Add Book</h3>
 
+	<p class='alert alert-warning'>
+
+		<a href='logout.php' class='pull-right'>Logout</a>
+	</p>
+	
 	<hr />
 		<?php
 

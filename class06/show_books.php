@@ -37,6 +37,7 @@
 						. "<td>{$row['book_price']}</td>"
 						//. "<td>{$row['category_id']}</td>"
 						. "<td>{$row['category_name']}</td>"
+						//. "<td>{$row['publisher_id']}</td>"
 						. "<td>{$row['publisher_name']}</td>"
 						. "<td>{$row['isbn_number']}</td>"
 						. "<td>{$row['published_year']}</td>"

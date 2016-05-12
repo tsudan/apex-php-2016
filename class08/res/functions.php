@@ -114,3 +114,78 @@
 
 		return $res;
 	}
+
+	// validate user
+
+	function validate_user( $email, $password ) {
+
+		$conn = connect_db();
+
+		$query = "SELECT * FROM users WHERE email_address='$email' AND password=MD5('$password')";
+
+		echo $query;
+
+		$res = @mysqli_query( $conn, $query );
+
+		$data = array();
+
+		if( $res ) {
+
+			/*while( $row = @mysqli_fetch_array( $res, MYSQLI_ASSOC ) ) {
+
+				$data['email_address'] = $row[]
+			}*/
+
+			$data = @mysqli_fetch_array( $res, MYSQLI_ASSOC );
+
+		}
+
+		close_db( $conn );
+
+		return $data;
+	}
+
+	function register_user( $user ) {
+
+		$conn = connect_db();
+
+		$query = "INSERT INTO customers(f_name, l_name, email_address, password) VALUES( '{$user['first_name']}', '{$user['last_name']}', '{$user['email_address']}', MD5('{$user['password']}') )";
+
+		echo $query;
+
+		$result = @mysqli_query( $conn, $query );
+
+		close_db( $conn );
+
+		return $result;
+	}
+
+	// validate user
+
+	function validate_customer( $email, $password ) {
+
+		$conn = connect_db();
+
+		$query = "SELECT * FROM customers WHERE email_address='$email' AND password=MD5('$password')";
+
+		//echo $query;
+
+		$res = @mysqli_query( $conn, $query );
+
+		$data = array();
+
+		if( $res ) {
+
+			/*while( $row = @mysqli_fetch_array( $res, MYSQLI_ASSOC ) ) {
+
+				$data['email_address'] = $row[]
+			}*/
+
+			$data = @mysqli_fetch_array( $res, MYSQLI_ASSOC );
+
+		}
+
+		close_db( $conn );
+
+		return $data;
+	}
