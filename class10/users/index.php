@@ -6,3 +6,6 @@
 		echo 'Welcome ' . $_SESSION['first_name'] . ' ' . $_SESSION['last_name'];
 	else
 		echo 'Session not created';
+?>
+
+	<a href="logout.php">Logout</a>
