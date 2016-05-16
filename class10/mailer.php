@@ -35,8 +35,8 @@
 		$mail->SMTPSecure = "tls";                 // sets the prefix to the servier
 		$mail->Host       = "smtp.gmail.com";      // sets GMAIL as the SMTP server
 		$mail->Port       = 587;                   // set the SMTP port for the GMAIL server
-		$mail->Username   = "sudan.apex.college@gmail.com";  // GMAIL username
-		$mail->Password   = "SUDAN@2016";            // GMAIL password
+		$mail->Username   = "";  // GMAIL username
+		$mail->Password   = "";            // GMAIL password
 	  
 
 	  	//Set who the message is to be sent from
